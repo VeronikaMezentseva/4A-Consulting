@@ -20,9 +20,7 @@ export const OfferCardHorizontal: FC<{
 }) => {
   return (
     <div className="relative flex min-h-[125px]">
-      {isSale ? (
-        <SaleLabel text={discountPercent} isSale={isSale}></SaleLabel>
-      ) : null}
+      {isSale ? <SaleLabel text={discountPercent} isSale={isSale} /> : null}
       <div
         className={`flex items-center rounded-3xl border-2 border-gray-600 bg-white pb-7 pl-5 pr-6 pt-11 transition-all duration-200 hover:border-aqua hover:bg-aqua hover:bg-opacity-5`}
       >
@@ -33,13 +31,10 @@ export const OfferCardHorizontal: FC<{
         </h3>
         <div className={`mr-14`}>
           <div>
-            <PriceParagraph price={priceWithDiscount}></PriceParagraph>
+            <PriceParagraph price={priceWithDiscount} />
           </div>
           <div className={`-mt-3`}>
-            <CrossedPriceParagraph
-              price={fullPrice}
-              isSale={isSale}
-            ></CrossedPriceParagraph>
+            <CrossedPriceParagraph price={fullPrice} isSale={isSale} />
           </div>
         </div>
         <p

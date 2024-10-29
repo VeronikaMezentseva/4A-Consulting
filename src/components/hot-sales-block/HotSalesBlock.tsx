@@ -72,7 +72,7 @@ export const HotSalesBlock: FC = () => {
               salePrice={weekPopularPromo?.price || 0}
               price={weekFullPricePromo?.price || 0}
               discountPercent={40}
-            ></CardMini>
+            />
           </li>
           <li>
             <CardMini
@@ -81,7 +81,7 @@ export const HotSalesBlock: FC = () => {
               salePrice={monthPopularPromo?.price || 0}
               price={monthFullPricePromo?.price || 0}
               discountPercent={50}
-            ></CardMini>
+            />
           </li>
           <li>
             <CardMini
@@ -90,12 +90,12 @@ export const HotSalesBlock: FC = () => {
               salePrice={threeMonthsPopularPromo?.price || 0}
               price={threeMonthsFullPricePromo?.price || 0}
               discountPercent={60}
-            ></CardMini>
+            />
           </li>
         </ul>
       </div>
       <div className="flex justify-center">
-        <Button text={"Начать тренироваться"}></Button>
+        <Button text={"Начать тренироваться"} />
       </div>
     </>
   );

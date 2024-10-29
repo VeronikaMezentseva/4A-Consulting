@@ -13,7 +13,6 @@ export default function Home() {
 
   useEffect(() => {
     if (showModal) {
-      console.log("show modal");
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
@@ -23,12 +22,11 @@ export default function Home() {
   useEffect(() => {
     if (timerStopped) {
       setShowModal(true);
-      console.log(showModal);
     }
   }, [timerStopped]);
 
   useEffect(() => {
-    let timer = setInterval(() => {
+    const timer = setInterval(() => {
       setTime((time) => {
         if (time === 0) {
           setTimerStopped(true);
@@ -42,7 +40,7 @@ export default function Home() {
 
   return (
     <main className={`bg-gray-100`}>
-      <Header time={time} isTimerStopped={timerStopped}></Header>
+      <Header time={time} isTimerStopped={timerStopped} />
       <section className="pb-[107px] pl-44 pr-44">
         <h2 className="mb-16 mt-7 text-center font-Rubik text-title font-bold uppercase text-main-font">
           Выберите подходящий тарифный план
@@ -52,19 +50,15 @@ export default function Home() {
             <img className="max-h-[715px]" src={manBg.src} alt="" />
           </div>
           <StoreProvider>
-            <OffersBlock time={time}></OffersBlock>
+            <OffersBlock time={time} />
           </StoreProvider>
         </div>
       </section>
-      <Modal
-        showModal={showModal}
-        onClose={() => setShowModal(false)}
-        children={
-          <StoreProvider>
-            <HotSalesBlock></HotSalesBlock>
-          </StoreProvider>
-        }
-      ></Modal>
+      <Modal showModal={showModal} onClose={() => setShowModal(false)}>
+        <StoreProvider>
+          <HotSalesBlock />
+        </StoreProvider>
+      </Modal>
     </main>
   );
 }

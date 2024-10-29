@@ -8,7 +8,6 @@ import {
   getPromos,
   selectForeverPromos,
   selectMonthPromos,
-  selectPopularPromos,
   selectThreeMonthsPromos,
   selectWeekPromos,
 } from "@/slices/promos-slice/promos-slice";
@@ -70,7 +69,7 @@ export const OffersBlock: FC<{ time: number }> = ({ time }) => {
                   : weekFullPricePromo?.price || 0
               }
               text="Чтобы просто начать 👍🏻"
-            ></OfferCard>
+            />
           </div>
           <div>
             <OfferCard
@@ -84,7 +83,7 @@ export const OffersBlock: FC<{ time: number }> = ({ time }) => {
                   : monthFullPricePromo?.price || 0
               }
               text="Привести тело впорядок 💪🏻"
-            ></OfferCard>
+            />
           </div>
           <div>
             <OfferCard
@@ -98,7 +97,7 @@ export const OffersBlock: FC<{ time: number }> = ({ time }) => {
                   : threeMonthsFullPricePromo?.price || 0
               }
               text="Изменить образ жизни 🔥"
-            ></OfferCard>
+            />
           </div>
           <div className="col-span-3">
             <OfferCardHorizontal
@@ -112,7 +111,7 @@ export const OffersBlock: FC<{ time: number }> = ({ time }) => {
                   : foreverFullPricePromo?.price || 0
               }
               text={"Всегда быть в форме и поддерживать своё здоровье ⭐️"}
-            ></OfferCardHorizontal>
+            />
             <p className="colors: fontSize: fontFamily: mb-7 mt-3 font-PT-Root-UI_Medium text-xs text-main-font">
               Следуя плану на 3 месяца, люди получают в 2 раза лучший результат,
               чем за 1 месяц
@@ -127,7 +126,7 @@ export const OffersBlock: FC<{ time: number }> = ({ time }) => {
               ></input>
               <label
                 htmlFor="privacyPolicy"
-                className="cursor-pointerfont-PT-Root-UI_Regular relative inline-block h-6 w-6 rounded border-2 border-solid border-aqua text-gray-200 after:absolute after:h-[20px] after:w-[22px] after:bg-center after:bg-no-repeat after:content-[''] peer-checked:bg-aqua peer-checked:after:bg-[url('/images/check-mark.png')]"
+                className="cursor-pointer font-PT-Root-UI_Regular relative inline-block h-6 w-6 rounded border-2 border-solid border-aqua text-gray-200 after:absolute after:h-[20px] after:w-[22px] after:bg-center after:bg-no-repeat after:content-[''] peer-checked:bg-aqua peer-checked:after:bg-[url('/images/check-mark.png')]"
               ></label>
               <p className="ml-3 text-xxs text-gray-200">
                 Я соглашаюсь с
@@ -140,7 +139,7 @@ export const OffersBlock: FC<{ time: number }> = ({ time }) => {
                 </Link>
               </p>
             </div>
-            <Button text="Купить" animate={true} textUpperCase={true}></Button>
+            <Button text="Купить" animate={true} textUpperCase={true} />
             <p className="font-PT-Root-UI_Regular text-conditions text-gray-200">
               Нажимая «Купить», Пользователь соглашается на автоматическое
               списание денежных средств по истечению купленного периода.

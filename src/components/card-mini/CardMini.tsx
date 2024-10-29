@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { PriceParagraphCrossedMini } from "../price-paragraph-crossed-mini/PriceParagraphCrossedMini";
-import { PriceParagraph } from "../price-paragraph/PriceParagraph";
 import { SaleLabelMini } from "../sale-label-mini/SaleLabelMini";
+import { PriceParagraphMini } from "../price-paragraph-mini/PriceParagraphMini";
 
 export const CardMini: FC<{
   itemId: "week" | "month" | "threeMonths";
@@ -32,13 +32,13 @@ export const CardMini: FC<{
           {name}
         </p>
         <div className="mb-4 flex items-start">
-          <PriceParagraphCrossedMini price={price}></PriceParagraphCrossedMini>
+          <PriceParagraphCrossedMini price={price} />
         </div>
         <span className="mb-6 block h-[1px] w-[100%] bg-light-border pl-[40px]"></span>
         <div className="relative flex gap-[5px]">
-          <PriceParagraph price={salePrice} textSize="46px"></PriceParagraph>
+          <PriceParagraphMini price={salePrice} />
           <div className="relative">
-            <SaleLabelMini text={discountPercent}></SaleLabelMini>
+            <SaleLabelMini text={discountPercent} />
           </div>
         </div>
       </label>

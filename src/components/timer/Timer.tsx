@@ -6,21 +6,17 @@ export const Timer: FC<{ time: number; isTimerStopped: boolean }> = ({
 }) => {
   let isTimeOut = false;
 
-  let extraClasses;
   if (time <= 30) {
     isTimeOut = true;
-    extraClasses = "warn";
   }
-
-  const animateClasses = isTimerStopped ? "animate-none opacity-50" : "";
 
   return (
     <div className="relative">
       <span className="before:fontSize: colors: block text-xxs font-bold text-gray-200 before:absolute before:bottom-0 before:font-PT-Root-UI_Bold before:content-['минут']"></span>
       <div
         className={`${
-          isTimeOut ? "animate-pulse text-warn" : ""
-        } flex gap-3 font-Bebas-Neue text-timer text-aqua ${animateClasses}`}
+          isTimeOut && !isTimerStopped ? "animate-pulse text-warn" : ""
+        } flex gap-3 font-Bebas-Neue text-timer text-aqua ${isTimerStopped ? "animate-none text-warn opacity-50" : ""}`}
       >
         {`${Math.floor(time / 60)}`.padStart(2, "0")}
         <div className="flex flex-col justify-center gap-[5px]">
