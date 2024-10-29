@@ -1,5 +1,3 @@
-import Image from "next/image";
-import localFont from "next/font/local";
 import { Header } from "@/components/header/Header";
 import { OffersBlock } from "@/components/offers-block/OffersBlock";
 import manBg from "../images/man-bg.png";
@@ -7,17 +5,6 @@ import { useEffect, useState } from "react";
 import StoreProvider from "@/store-provider/StoreProvider";
 import Modal from "@/components/modal/Modal";
 import { HotSalesBlock } from "@/components/hot-sales-block/HotSalesBlock";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export default function Home() {
   const [time, setTime] = useState(120); // секунды
@@ -54,13 +41,13 @@ export default function Home() {
   }, []);
 
   return (
-    <main className={`${geistSans.variable} ${geistMono.variable} bg-gray-100`}>
+    <main className={`bg-gray-100`}>
       <Header time={time} isTimerStopped={timerStopped}></Header>
-      <section className="pr-44 pl-44 pb-[107px]">
-        <h2 className="text-center text-title text-main-font font-bold mt-7 uppercase  mb-16 font-Rubik">
+      <section className="pb-[107px] pl-44 pr-44">
+        <h2 className="mb-16 mt-7 text-center font-Rubik text-title font-bold uppercase text-main-font">
           Выберите подходящий тарифный план
         </h2>
-        <div className="grid gap-20 grid-cols-mainGrid ">
+        <div className="grid grid-cols-mainGrid gap-20">
           <div className="flex justify-end">
             <img className="max-h-[715px]" src={manBg.src} alt="" />
           </div>

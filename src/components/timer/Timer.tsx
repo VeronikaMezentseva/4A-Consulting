@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { FC } from "react";
 
 export const Timer: FC<{ time: number; isTimerStopped: boolean }> = ({
   time,
@@ -16,28 +16,28 @@ export const Timer: FC<{ time: number; isTimerStopped: boolean }> = ({
 
   return (
     <div className="relative">
-      <span className="before:font-PT-Root-UI_Bold before:content-['минут'] block before:absolute before:fontSize: text-xxs before:bottom-0 colors: text-gray-200 font-bold"></span>
+      <span className="before:fontSize: colors: block text-xxs font-bold text-gray-200 before:absolute before:bottom-0 before:font-PT-Root-UI_Bold before:content-['минут']"></span>
       <div
         className={`${
           isTimeOut ? "animate-pulse text-warn" : ""
-        } flex gap-3 text-timer text-aqua font-Bebas-Neue ${animateClasses}`}
+        } flex gap-3 font-Bebas-Neue text-timer text-aqua ${animateClasses}`}
       >
         {`${Math.floor(time / 60)}`.padStart(2, "0")}
-        <div className="flex flex-col gap-[5px] justify-center">
+        <div className="flex flex-col justify-center gap-[5px]">
           <span
             className={`${
               isTimeOut ? "bg-warn" : ""
-            } block w-[5px] h-[5px] rounded-[20px] bg-aqua bg-opacity-55`}
+            } block h-[5px] w-[5px] rounded-[20px] bg-aqua bg-opacity-55`}
           ></span>
           <span
             className={`${
               isTimeOut ? "bg-warn" : ""
-            } block w-[5px] h-[5px] rounded-[20px] bg-aqua bg-opacity-55`}
+            } block h-[5px] w-[5px] rounded-[20px] bg-aqua bg-opacity-55`}
           ></span>
         </div>
         {`${time % 60}`.padStart(2, "0")}
       </div>
-      <span className="before:font-PT-Root-UI_Bold before:absolute before:content-['секунд'] before:bottom-0 before:right-0 before:fontSize: text-xxs colors: text-gray-200 font-bold"></span>
+      <span className="before:fontSize: colors: text-xxs font-bold text-gray-200 before:absolute before:bottom-0 before:right-0 before:font-PT-Root-UI_Bold before:content-['секунд']"></span>
     </div>
   );
 };

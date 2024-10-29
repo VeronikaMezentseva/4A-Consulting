@@ -3,10 +3,6 @@ import { TPromo } from "./types";
 const checkResponse = <T>(res: Response): Promise<T> =>
   res.ok ? res.json() : res.json().then((err) => Promise.reject(err));
 
-type TServerResponse<T> = {
-  success: boolean;
-} & T;
-
 export const getPromosApi: () => Promise<TPromo[]> = () =>
   fetch(`https://t-pay.iqfit.app/subscribe/list-test`, {
     method: "GET",

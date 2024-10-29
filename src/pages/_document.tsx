@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="ru">
       <Head />
-      <body className="antialiased bg-gray-100">
+      <body className="bg-gray-100 antialiased">
         <Main />
         <NextScript />
         <div id="modal-root"></div>
