@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -23,5 +23,49 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+} */
+
+@layer base {
+  @font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-display: swap;
+    src: url("./fonts/Rubik/Rubik-VariableFont_wght.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "PT-Root-UI_Bold";
+    font-style: normal;
+    font-display: swap;
+    src: url("./fonts/PT-Root-UI/PT-Root-UI_Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "PT-Root-UI_Light";
+    font-style: normal;
+    font-display: swap;
+    src: url("./fonts/PT-Root-UI/PT-Root-UI_Light.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "PT-Root-UI_Medium";
+    font-style: normal;
+    font-display: swap;
+    src: url("./fonts/PT-Root-UI/PT-Root-UI_Medium.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "PT-Root-UI_Regular";
+    font-style: normal;
+    font-display: swap;
+    src: url("./fonts/PT-Root-UI/PT-Root-UI_Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Bebas-Neue";
+    font-style: normal;
+    font-display: swap;
+    src: url("./fonts/Bebas-Neue.ttf") format("truetype");
   }
 }
