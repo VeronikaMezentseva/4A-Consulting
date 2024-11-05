@@ -126,7 +126,7 @@ export const OffersBlock: FC<{ time: number }> = ({ time }) => {
               ></input>
               <label
                 htmlFor="privacyPolicy"
-                className="cursor-pointer font-PT-Root-UI_Regular relative inline-block h-6 w-6 rounded border-2 border-solid border-aqua text-gray-200 after:absolute after:h-[20px] after:w-[22px] after:bg-center after:bg-no-repeat after:content-[''] peer-checked:bg-aqua peer-checked:after:bg-[url('/images/check-mark.png')]"
+                className="cursor-pointer font-PT-Root-UI_Regular relative inline-block h-6 w-6 rounded border-2 border-solid border-aqua text-gray-200 after:absolute after:h-[20px] after:w-[22px] after:bg-center after:bg-no-repeat after:content-[''] peer-checked:bg-aqua peer-checked:after:bg-[url('./images/check-mark.png')]"
               ></label>
               <p className="ml-3 text-xxs text-gray-200">
                 Я соглашаюсь с
